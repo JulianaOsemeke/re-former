@@ -34,6 +34,7 @@
 <% 
 =end %>
 <%= form_with(model:@user,local:true) do |form| %>
+  <%= render 'layouts/errors'%>
   <%= form.label :name, "Your user name here" %><br>
   <%= form.text_field :name , placeholder: "Name" %><br>
   <%= form.label :email, "Your user email here" %><br>
