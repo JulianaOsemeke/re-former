@@ -33,8 +33,7 @@
 <% end  %>
 <% 
 =end %>
-
-<%= form_with model: @user do |form| %>
+<%= form_with(model:@user,local:true) do |form| %>
   <%= form.label :name, "Your user name here" %><br>
   <%= form.text_field :name , placeholder: "Name" %><br>
   <%= form.label :email, "Your user email here" %><br>
@@ -43,4 +42,3 @@
   <%= form.password_field :password, placeholder: "password" %><br>
   <%= form.submit "Submit" %>
 <% end %>
-

@@ -12,6 +12,16 @@ end
     @user = User.new(name: "Jules" , email: "juliana.osemeke@gmail.com")
   end
 
+  def edit
+    @user = User.find(params[:id])
+    render :new
+  end
+
+  def update
+    @user = User.find_by(params[:id])
+    @user.update()
+  end
+
   private
   def user_params
     params.require(:user).permit(:name,:email,:password)
