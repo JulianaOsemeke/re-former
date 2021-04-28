@@ -1,1 +1,13 @@
-
+<% 
+=begin %>
+<%= form_tag(users_path, method: "post") do %>
+  <%= label_tag(:name, "Enter Name:")%><br>
+  <%= text_field_tag(:'user[name]')%><br>
+  <%= label_tag(:email, "Enter Email:")%><br>
+  <%= email_field(:user,:email)%><br>
+  <%= label_tag(:password, "Enter password:")%><br>
+  <%= password_field_tag(:'user[password]')%><br>
+  <%= submit_tag("Submit")%>
+<% end  %>
+<% 
+=end %>
