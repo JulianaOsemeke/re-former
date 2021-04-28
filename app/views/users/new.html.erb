@@ -33,3 +33,14 @@
 <% end  %>
 <% 
 =end %>
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :name, "Enter Name" %><br>
+  <%= form.text_field :name %><br>
+  <%= form.label :email, "Enter Email" %><br>
+  <%= form.email_field :email %><br>
+  <%= form.label :password, "Enter password" %><br>
+  <%= form.password_field :password %><br>
+  <%= form.submit "Submit" %>
+<% end %>
+
