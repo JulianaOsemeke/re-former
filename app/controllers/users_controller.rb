@@ -9,7 +9,7 @@ def create
 end
 
   def new
-    @user = User.new
+    @user = User.new(name: "Jules" , email: "juliana.osemeke@gmail.com")
   end
 
   private
