@@ -1,5 +1,16 @@
 <form action="/users" method="post" accept-charset="UTF-8" >
-    <input type="text">
-    
-    <input type="submit" value="Submit This Form">
+<div>
+<label for="user_name">Name</label><br>
+<input type="text" name="user[name]" id="user_name">
+</div>
+
+<div>
+<label for="user_email">Email</label><br>
+<input type="email" name="user[email]" id="user_email">
+</div>
+
+<div>
+<label for="user_password">Password</label><br>
+<input type="password" name="user[password]" id="user_password">
+</div>
   </form>
