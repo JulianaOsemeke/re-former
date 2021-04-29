@@ -6,16 +6,14 @@ def create
   else
     render :show
   end
-end
 
   def new
-    @user = User.new(name: "Jules" , email: "juliana.osemeke@gmail.com")
+    @user = User.new(name: 'Jules', email: 'juliana.osemeke@gmail.com')
   end
 
   def edit
     @user = User.find(params[:id])
   end
-
 
   def index
     @users = User.all
@@ -33,8 +31,8 @@ end
   end
 
   private
+
   def user_params
-    params.require(:user).permit(:name,:email,:password)
+    params.require(:user).permit(:name, :email, :password)
   end
-  
 end
