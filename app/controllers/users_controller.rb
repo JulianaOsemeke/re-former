@@ -2,9 +2,9 @@ class UsersController < ApplicationController
 def create
   @user = User.new(user_params)
   if @user.save
-    redirect_to new_user_url
+    redirect_to @user
   else
-    render :new
+    render :show
   end
 end
 
@@ -28,7 +28,7 @@ end
   def update
     @user = User.find_by(params[:id])
     if @user.update(user_params)
-      render :show
+      render 'show'
     end
   end
 
